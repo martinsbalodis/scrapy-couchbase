@@ -49,7 +49,7 @@ class CouchBaseCacheStorage(object):
             'status': response.status,
             'response_url': response.url,
             'timestamp': time(),
-            'response_body': response.body,
+            'response_body': response.body_as_unicode(),
             'response_headers': headers_dict_to_raw(response.headers),
             'request_headers': headers_dict_to_raw(request.headers),
             'request_body': request.body,
